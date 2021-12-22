@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=saw');
+*{
+    padding: 0;
+    margin: 0;
+}
+html,body{
+    overflow-x: hidden;
+}
+.container{
+    display: flex;
+    justify-content: center; /* contenedor arriba pero todo full */
+    align-items: center; /* lo del contenedor justo en el centro*/
+    height: 100vh;
+    background: #e83e37;
+    overflow-x: hidden;
+}
+form{
+    position:absolute;
+    top:53.5%;
+    right:38.5%;
+}
+textarea{
+    font-size: 40px;
+    font-family: 'pacifico';
+}
+#name{
+    font-size: 20px;
+    font-family: 'pacifico';
+    position:absolute;
+    left: 36%;
+    top:106%;
+}
+input{
+    color:#e83e37;
+}
+#enviar{
+    font-size: 20px;
+    font-family: 'pacifico';
+    position:absolute;
+    left: 36%;
+    top:130%;
+}
+.music{
+    position: fixed;
+    bottom: 0px;
+    right:0px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    right:45%;
+
+}
+.cartaimg{
+    position:absolute;
+    right:42%;
+}
+#nieve {
+    position: relative;
+}
+#nieve:after {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    background-image: url('../imagen/s1.webp'), url('../imagen/s2.webp'), url('../imagen/s3.webp');
+    animation: nieves 10s linear infinite;
+}
+@keyframes nieves {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
+
+@media only screen and (min-width: 768px) {
+    body{
+        overflow: hidden;
+    }
+    form{
+        top:53.4%;
+        left:34.6%;
+    }
+    textarea{
+        font-size:20px;
+        width:394px;
+        height:250px;
+    }
+    #name{
+        font-size:15px;
+        left:41%;
+    }
+    img{
+        width:700px;
+    }
+    .cartaimg{
+        width: 300px;
+        left:35%;
+    }
+    #enviar{
+        left:44%;
+        top: 125%;
+    }
+    .music{
+        right:39%;
+
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .container{
+        height:100vh;
+        width: 100vh;
+    }
+    body{
+        overflow: hidden;
+    }
+
+    form{
+        top: 59%;
+        left:10%;
+    }
+    textarea{
+        font-size:15px;
+        width:230px;
+        height:140px;
+    }
+    #name{
+        font-size:15px;
+        left:29%;
+        top:100%;
+        width:130px;
+        height: 20px;
+    }
+    img{
+        width:400px;
+        left:10%;
+    }
+    .cartaimg{
+        width: 160px;
+        left:15%;
+        top:15%;
+    }
+    .santarisa{
+        position:absolute;
+        top:20%;
+        left:-5%;
+    }
+    
+    #enviar{
+        left:30%;
+        top: 125%;
+        height:38px;
+        
+    }
+    .music{
+        right:85%;
+        top:8%;
+        width: 15%;
+
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .container{
+        height:100vh;
+        width: 100vh;
+    }
+    body{
+        overflow: hidden;
+    }
+
+    form{
+        top: 45%;
+        left: 7%;
+    }
+    textarea{
+        font-size:15px;
+        width:220px;
+        height:140px;
+    }
+    #name{
+        font-size:15px;
+        left:22%;
+        top:98%;
+        width:130px;
+        height: 20px;
+    }
+    img{
+        width:370px;
+        left:10%;
+    }
+    .cartaimg{
+        width: 160px;
+        left:11%;
+        top: 10%;
+    }
+    .santarisa{
+        position:absolute;
+        top:15%;
+        left:-4.5%;
+    }
+    
+    #enviar{
+        left:20%;
+        top: 125%;
+        height:38px;
+        
+    }
+    .music{
+        right:85%;
+        top:-13%;
+        width: 13%;
+
+    }
+}
+
+@media screen and (max-width:414px){
+    .music{
+        right:13%;
+    }
+    form{
+        top: 50.5%;
+        left: 16%;
+    }
+    textarea{
+        font-size:15px;
+        width:285px;
+        height:190px;
+    }
+    #name{
+        font-size:15px;
+        left:55%;
+        top:100%;
+        width:130px;
+        height: 20px;
+    }
+    img{
+        width:500px;
+    }
+    .cartaimg{
+        width: 200px;
+        left:25%;
+        top: 10%;
+    }
+    .santarisa{
+        position:absolute;
+        top:15%;
+        left:-10.5%;
+    }
+    
+    #enviar{
+        left:60%;
+        top: 125%;
+        height:38px;
+        
+    }
+    .music{
+        right:75%;
+        top:90%;
+        width: 25%;
+
+    }
+    
+}

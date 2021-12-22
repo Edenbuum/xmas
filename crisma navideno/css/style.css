@@ -1,0 +1,199 @@
+/* Importar tipo de letra */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=saw');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Pacifico', cursive;
+}
+html,body{
+    overflow-x: hidden;
+}
+/*modificar el contenedor */
+.container{
+    display: flex;
+    justify-content: center; /* contenedor arriba pero todo full */
+    align-items: center; /* lo del contenedor justo en el centro*/
+    height: 100vh;
+    background: #e83e37;
+    overflow-x: hidden;
+}
+
+.container .main{
+    position: absolute;
+    width: 400px;
+    height: 400px;
+}
+
+.container .main::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+    transform: rotate(45deg);
+    transform-origin: left;
+    z-index: 1;
+}
+
+.container .main .hoho{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg,#f3efef,#ffffff);
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    z-index: 2;
+}
+.container .main .hoho::before{
+    content: '';
+    position: absolute;
+    top: 5px;
+    left:5px;
+    right: 5px;
+    bottom: 5px;
+    background: linear-gradient(315deg,#ffffff,#ffffff);
+    border-radius: 50%;
+}
+/* */
+.container .main h1{
+    text-align: center;
+    color: rgb(219, 56, 56);
+    font-size: 2em;
+    width:100%;
+    z-index: 3;
+}
+
+.marcoletra{
+    text-decoration: none;
+    border-radius: 40px;
+    z-index: 4;
+    background: rgb(255, 255, 255);
+}
+.voice{
+    position:absolute;
+    left:39%;
+    top:40%;
+    z-index: 3;
+    text-shadow: -1px -1px 1px #000;
+    color: rgb(255, 255, 255);
+    opacity:0%;
+    animation: ho 5s infinite;
+}
+.voice2{
+    position:absolute;
+    left:41%;
+    top:43%;
+    z-index: 3;
+    text-shadow: -1px -1px 1px #000;
+    color: rgb(255, 255, 255);
+    opacity:0%;
+    animation: ho 5s infinite;
+}
+.voice3{
+    position:absolute;
+    left:43%;
+    top:46%;
+    z-index: 3;
+    text-shadow: -1px -1px 1px #000;
+    color: rgb(255, 255, 255);
+    opacity:0%;
+    animation: ho 5s infinite;
+}
+@keyframes ho {
+    100%{
+        opacity:100%;
+    }
+}
+
+/* */
+
+/* */
+.container .main .hoho img{
+    position: absolute;
+    height: 300px;
+    left:22%;
+    top:15%;
+    z-index: 3;
+    animation: face 0.6s linear infinite;
+}
+.container .main .hoho .santa:hover{
+    position: absolute;
+    height: 300px;
+    left:22%;
+    top:15%;
+    z-index: 2;
+    animation: face 0.6s linear infinite;
+}
+@keyframes face{
+    0%{
+        transform:rotate(0deg);
+    }
+    25%{
+        transform:rotate(8deg);
+    }
+    50%{
+        transform:rotate(-8deg);
+    }
+    75%{
+        transform:rotate(0deg);
+    }
+    100%{
+        transform:rotate(0deg);
+    }
+}
+/* */
+
+
+/* */
+#nieve {
+    position: relative;
+}
+#nieve:after {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    background-image: url('../imagen/s1.webp'), url('../imagen/s2.webp'), url('../imagen/s3.webp');
+    animation: nieves 10s linear infinite;
+}
+ 
+@keyframes nieves {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
+/* */
+
+.music{
+    position: fixed;
+    bottom: 0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    right:40%;
+    z-index: 5;
+}
+
+@media screen and (max-width:414px){
+    .music{
+        right:13%;
+    }
+    .voice{
+        left:10%;
+    }
+    .voice2{
+        left:18%;
+    }
+    .voice3{
+        left:25%;
+    }
+}

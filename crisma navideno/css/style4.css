@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=saw');
+*{
+    padding: 0;
+    margin: 0;
+}
+html,body{
+  overflow-x: hidden;
+}
+.container{
+    display: flex;
+    justify-content: center; /* contenedor arriba pero todo full */
+    align-items: center; /* lo del contenedor justo en el centro*/
+    height: 100vh;
+    background: rgba(110,23,23);
+}
+img{
+    width:200px;
+}
+#uno{
+    animation: rebote-out 2s forwards;
+}
+#dos{
+    animation: cortinilla 5s forwards;
+    opacity:0%;
+}
+p{
+    font-family:'pacifico';
+    color: rgb(255, 255, 255);
+    font-size: 0.5cm;
+}
+.rebote-out{
+    animation: rebote-out 1s 2; 
+  }
+  @keyframes rebote-out{
+    25%{
+      transform: scale(0.9);
+    }
+    50%{ 
+      transform: scale(1.1);
+      opacity: 1; 
+    }
+    100%{
+      transform: scale(0);
+      opacity: 0;
+    }  
+  }
+
+  .tapa:hover{ 
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 190px;
+    height: 65px;
+    background: rgb(255, 255, 255);
+    left: 100%;
+  }
+
+  @keyframes cortinilla{
+    20%{
+        left: 0px;
+        opacity:0%;
+    }
+    40%{
+        left: 0px;
+        opacity:30%;
+    }
+    60%{
+        left: 0px;
+        opacity:60%;
+    }
+    80%{
+        left: 0px;
+        opacity:80%;
+    }
+    100%{
+      left: 0px;
+      opacity:100%;
+    }
+  }
+   
+  
+#nieve {
+    position: relative;
+}
+#nieve:after {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    background-image: url('../imagen/s1.webp'), url('../imagen/s2.webp'), url('../imagen/s3.webp');
+    animation: nieves 10s linear infinite;
+}
+ 
+@keyframes nieves {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
